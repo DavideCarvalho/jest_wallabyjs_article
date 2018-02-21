@@ -1,18 +1,15 @@
-module.exports = function (wallaby) {
+module.exports = function () {
 
   return {
-    files: ['src/**/index.js', '!src/**/__tests__/*.js'],
+    files: ['src/**/*.js', '!src/**/__tests__/*.js'],
 
-    tests: ['src/**/__tests__/*.js', 'src/**/*.test.js'],
+    tests: ['src/**/__tests__/*.js'],
 
     env: {
       type: 'node',
       runner: 'node'
     },
 
-    testFramework: 'jest',
-    compilers: {
-      '**/*.js': wallaby.compilers.babel()
-    }
+    testFramework: 'jest'
   };
 };

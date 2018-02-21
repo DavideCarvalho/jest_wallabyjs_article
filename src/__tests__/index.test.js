@@ -1,5 +1,4 @@
-// @flow
-const api = require('./index');
+const api = require('../index');
 const axios = require('axios');
 
 describe('index.js', () => {
